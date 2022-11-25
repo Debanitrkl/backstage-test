@@ -1,13 +1,17 @@
 apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
-  name: demo-1
+  name: demo
   description: demo
   annotations:
+    # mandatory annotation
     harness.io/project-url: ttps://app.harness.io/ng/#/account/vpCkHKsDSxK9_KYfjCTMKA/home/orgs/default/projects/communityeng
+    # optional annotations, don't include this block if not needed
+    harness.io/ci-pipelineIds: <pipelineId1,pipelineId2,pipelineId3 etc>
+    harness.io/cd-serviceId: <serviceId>
   tags:
     - java
-  
+
   links:
     - url: https://example.com/user
       title: Examples Users
