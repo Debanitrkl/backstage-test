@@ -3,10 +3,9 @@ kind: Component
 metadata:
   name: demo-1
   description: demo
-  annotations:
-    harness.io/cicd-accountId: vpCkHKsDSxK9_KYfjCTMKA
-    harness.io/cicd-orgId: default
-    harness.io/cicd-projectId: communityeng
+   annotations:
+    # mandatory annotations
+    harness.io/project-url: ttps://app.harness.io/ng/#/account/vpCkHKsDSxK9_KYfjCTMKA/home/orgs/default/projects/communityeng
   tags:
     - java
   
