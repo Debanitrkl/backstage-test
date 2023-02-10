@@ -4,7 +4,7 @@ metadata:
   name: demo
   description: demo
   annotations:
-    harness.io/project-url: https://app.harness.io/ng/#/account/vpCkHKsDSxK9_KYfjCTMKA/cf/orgs/Feature_Flag/projects/FFPipelines
+    harness.io/project-url: https://app.harness.io/ng/#/account/vpCkHKsDSxK9_KYfjCTMKA/cf/orgs/Feature_Flag/projects/FFPipeliness
   tags:
     - java
   
