@@ -6,7 +6,7 @@ metadata:
   annotations:
     harness.io/cicd-accountIdentifier: vpCkHKsDSxK9_KYfjCTMKA
     harness.io/cicd-orgIdentifier: default
-    harness.io/cicd-projectIdentifier: communityeng
+    harness.io/cicd-projectIdentifier: PREQA_NG_Pipelines
   tags:
     - java
     - data
