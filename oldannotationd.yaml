@@ -4,9 +4,9 @@ metadata:
   name: demo-2
   description: demo-deba
   annotations:
-    harness.io/cicd-accountIdentifier: vpCkHKsDSxK9_KYfjCTMKA
+    harness.io/cicd-accountIdentifier: xUh5vopuSpyc808GM3_cgA
     harness.io/cicd-orgIdentifier: default
-    harness.io/cicd-projectIdentifier: PREQA_NG_Pipelines
+    harness.io/cicd-projectIdentifier: NgLabs
   tags:
     - java
     - data
