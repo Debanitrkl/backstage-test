@@ -1,10 +1,10 @@
 apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
-  name: demo
+  name: Feature-flag-demo
   description: demo
   annotations:
-    harness.io/project-url: https://app.harness.io/ng/#/account/vpCkHKsDSxK9_KYfjCTMKA/cf/orgs/Feature_Flag/projects/FFPipeliness
+    harness.io/project-url: https://app.harness.io/ng/#/account/vpCkHKsDSxK9_KYfjCTMKA/cf/orgs/default/projects/FEATUREBUILDS/
   tags:
     - java
   
@@ -33,4 +33,4 @@ metadata:
 spec:
   type: service
   lifecycle: experimental
-  owner: team-a
+  owner: team-cme
