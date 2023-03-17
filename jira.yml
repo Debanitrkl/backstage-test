@@ -1,8 +1,8 @@
 apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
-  name: canary-backend-service3
-  description: pipeline build and deploy
+  name: jira
+  description: jira
   annotations:
     jira/project-key: BT
   tags:
