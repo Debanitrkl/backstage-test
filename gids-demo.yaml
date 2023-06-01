@@ -8,7 +8,7 @@ metadata:
        jira/project-key: IDP
        github.com/project-slug: Debanitrkl/backstage-test
        backstage.io/techdocs-ref: url:https://github.com/backstage/backstage/tree/master/plugins/techdocs-backend/examples/documented-component
-       pagerduty.com/service-id: P7UJ77U
+       pagerduty.com/service-id: P09N5FE
        pagerduty.com/integration-key: R03DT3PRH1SU1J014M3FQDUQB53B4CUH
   tags:
     - java
