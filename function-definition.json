@@ -1,0 +1,6 @@
+{
+   "Runtime": "nodejs14.x",
+   "FunctionName": "Hello_World",
+   "Handler": "handler.hello",
+   "Role": "arn:aws:iam::751209113259:role/serverless-lambda"
+}
