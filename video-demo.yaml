@@ -14,5 +14,5 @@ metadata:
       type: admin-dashboard
 spec:
   type: service
-  lifecycle: production
+  lifecycle: qa
   owner: idp-eng
