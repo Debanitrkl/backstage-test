@@ -9,10 +9,26 @@ spec:
   type: service
 
   parameters:
-    - name: githubRepoUrl
-      type: string
-      description: GitHub Repository URL (e.g., https://github.com/org-name/repo-name)
-
+    - title: Fill in some steps
+      required:
+        - githuburl
+        - owner
+      properties:
+        githuburl:
+          title: Name Application
+          type: string
+          description: Unique name of the component
+          ui:autofocus: true
+          ui:options:
+            rows: 5
+        owner:
+          title: Owner
+          type: string
+          description: Owner of the component
+          ui:field: OwnerPicker
+          ui:options:
+            allowedKinds:
+              - Group
   steps:
     - id: extractDetails
       name: Extract Details
