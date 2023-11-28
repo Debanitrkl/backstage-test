@@ -5,7 +5,7 @@ metadata:
   title: Catalog Entity Template
   description: Template for creating and registering catalog-entity.yaml from a GitHub repo URL
 spec:
-  owner: team-name
+  owner: debabrata.panigrahi@harness.io
   type: service
 
   parameters:
