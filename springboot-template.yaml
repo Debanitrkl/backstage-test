@@ -74,10 +74,10 @@ spec:
       name: Creating Your springboot service
       action: trigger:harness-custom-pipeline
       input:
-        url: "https://app.harness.io/ng/account/0Z0vv0uwRoax_oZ62jBFfg/home/orgs/Development_Accelerators/projects/Starter_Kits/pipelines/NewSpringBootProject/pipeline-studio/?storeType=INLINE"
+        url: ""
         inputset:
           <+pipeline.variables.project_name>: ${{ parameters.project_name }}
-          <+pipeline.variables.github_repo>: ${{ parameters.github_repo }}
+          <+pipelhttps://app.harness.io/ng/account/vpCkHKsDSxK9_KYfjCTMKA/module/cd/orgs/default/projects/communityeng/pipelines/NewSpringBootProject/pipeline-studio?storeType=INLINEine.variables.github_repo>: ${{ parameters.github_repo }}
           <+pipeline.variables.project_type>: ${{ parameters.project_type }}
           <+pipeline.variables.language>: ${{ parameters.language }}
           <+pipeline.variables.springBootVersion>: ${{ parameters.springBootVersion }}
