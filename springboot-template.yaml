@@ -1,0 +1,95 @@
+apiVersion: scaffolder.backstage.io/v1beta3
+kind: Template
+metadata:
+  name: springbootservice
+  title: Create a Springboot service
+  description: A template for the scaffolder that creates a springboot service
+  tags:
+    - springboot
+    - harness
+spec:
+  owner: debabrata.panigrahi@harness.io
+  type: service
+  parameters:
+    - title: Springboot Service Details
+      required:
+        - project_name
+        - github_repo
+        - project_type
+        - language
+        - springBootVersion
+        - group
+        - artifact
+        - packageName
+        - packaging
+        - javaVersion
+      properties:
+        project_name:
+          title: Name of your Service
+          type: string
+          description: Unique name of the service
+        github_repo:
+          title: Name of the Repository
+          type: string
+          description: This will be the name of Repository on Github
+        project_type:
+          title: what project you want to select from?
+          type: string
+          enum: ["Gradle-Groovy","Gradle-Kotlin","Maven"]
+          default: Gradle-Groovy
+        language:
+          title: Select the Language
+          type: string
+          enum: ["Java","Kotlin","Groovy"]
+          default: Groovy
+        springBootVersion:
+          title: Select the springboot version
+          type: string
+          enum: ["3.2.1","3.2.0","3.1.7","3.1.6"]
+          default: 3.2.1
+        group:
+          title: Enter your Group
+          type: string
+          description: This will be the group website
+        artifact:
+          title: Enter your artifact name
+          type: string
+          description: asdf
+        packageName:
+          title: Enter your package name
+          type: string
+          description: asdf
+        packaging:
+          title: Select the package
+          type: string
+          enum: ["jar","war"]
+          default: jar  
+        javaVersion:
+          title: Select the java version
+          type: string
+          enum: ["21","17"]
+          default: 21 
+  steps:
+    - id: trigger
+      name: Creating Your springboot service
+      action: trigger:harness-custom-pipeline
+      input:
+        url: "https://app.harness.io/ng/account/0Z0vv0uwRoax_oZ62jBFfg/home/orgs/Development_Accelerators/projects/Starter_Kits/pipelines/NewSpringBootProject/pipeline-studio/?storeType=INLINE"
+        inputset:
+          <+pipeline.variables.project_name>: ${{ parameters.project_name }}
+          <+pipeline.variables.github_repo>: ${{ parameters.github_repo }}
+          <+pipeline.variables.project_type>: ${{ parameters.project_type }}
+          <+pipeline.variables.language>: ${{ parameters.language }}
+          <+pipeline.variables.springBootVersion>: ${{ parameters.springBootVersion }}
+          <+pipeline.variables.group>: ${{ parameters.group }}
+          <+pipeline.variables.artifact>: ${{ parameters.artifact }}
+          <+pipeline.variables.packageName>: ${{ parameters.packageName }}
+          <+pipeline.variables.packaging>: ${{ parameters.packaging }}
+          <+pipeline.variables.javaVersion>: ${{ parameters.javaVersion }}
+    # The final step is to register our new component in the catalog.
+
+
+  output:
+    links:
+      - title: Pipeline Details
+        url: ${{ steps.trigger.output.PipelineUrl }}
