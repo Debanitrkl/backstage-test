@@ -86,7 +86,6 @@ spec:
           <+pipeline.variables.packageName>: ${{ parameters.packageName }}
           <+pipeline.variables.packaging>: ${{ parameters.packaging }}
           <+pipeline.variables.javaVersion>: ${{ parameters.javaVersion }}
-        apikey: "pat.vpCkHKsDSxK9_KYfjCTMKA.65661f6e0554887311b0931f.BTWT8wROFPfuc4rFXKQj"
     # The final step is to register our new component in the catalog.
 
 
