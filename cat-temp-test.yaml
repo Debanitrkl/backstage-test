@@ -1,0 +1,44 @@
+apiVersion: backstage.io/v1alpha1
+kind: Template
+metadata:
+  name: catalog-entity-template
+  title: Catalog Entity Template
+  description: Template for creating and registering catalog-entity.yaml from a GitHub repo URL
+spec:
+  owner: team-name
+  type: service
+
+  parameters:
+    - name: githubRepoUrl
+      type: string
+      description: GitHub Repository URL (e.g., https://github.com/org-name/repo-name)
+
+  steps:
+    - id: extractDetails
+      name: Extract Details
+      action: custom:extractRepoDetails
+      input:
+        repoUrl: '{{ parameters.githubRepoUrl }}'
+
+    - id: fillTemplate
+      name: Fill template
+      action: fetch:cookiecutter
+      input:
+        url: ./skeleton
+        values:
+          serviceName: '{{ steps.extractDetails.outputs.serviceName }}'
+          owner: '{{ steps.extractDetails.outputs.orgName }}'
+
+    - id: publishToGitHub
+      name: Publish to GitHub
+      action: publish:github
+      input:
+        destination: '{{ parameters.githubRepoUrl }}'
+        values:
+          catalogInfoPath: './catalog-entity.yaml'
+
+    - id: registerEntity
+      name: Register Entity
+      action: catalog:register
+      input:
+        repoContentsUrl: '{{ parameters.githubRepoUrl }}/blob/main/catalog-entity.yaml'
