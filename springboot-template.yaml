@@ -87,8 +87,6 @@ spec:
           packaging: ${{ parameters.packaging }}
           javaVersion: ${{ parameters.javaVersion }}
     # The final step is to register our new component in the catalog.
-
-
   output:
     links:
       - title: Pipeline Details
