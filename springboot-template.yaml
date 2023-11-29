@@ -76,16 +76,16 @@ spec:
       input:
         url: "https://app.harness.io/ng/account/vpCkHKsDSxK9_KYfjCTMKA/module/cd/orgs/default/projects/communityeng/pipelines/NewSpringBootProject/pipeline-studio?storeType=INLINE"
         inputset:
-          <+pipeline.variables.project_name>: ${{ parameters.project_name }}
-          <+pipeline.variables.github_repo>: ${{ parameters.github_repo }}
-          <+pipeline.variables.project_type>: ${{ parameters.project_type }}
-          <+pipeline.variables.language>: ${{ parameters.language }}
-          <+pipeline.variables.springBootVersion>: ${{ parameters.springBootVersion }}
-          <+pipeline.variables.group>: ${{ parameters.group }}
-          <+pipeline.variables.artifact>: ${{ parameters.artifact }}
-          <+pipeline.variables.packageName>: ${{ parameters.packageName }}
-          <+pipeline.variables.packaging>: ${{ parameters.packaging }}
-          <+pipeline.variables.javaVersion>: ${{ parameters.javaVersion }}
+          project_name: ${{ parameters.project_name }}
+          github_repo: ${{ parameters.github_repo }}
+          project_type: ${{ parameters.project_type }}
+          language: ${{ parameters.language }}
+          springBootVersion: ${{ parameters.springBootVersion }}
+          group: ${{ parameters.group }}
+          artifact: ${{ parameters.artifact }}
+          packageName: ${{ parameters.packageName }}
+          packaging: ${{ parameters.packaging }}
+          javaVersion: ${{ parameters.javaVersion }}
     # The final step is to register our new component in the catalog.
 
 
