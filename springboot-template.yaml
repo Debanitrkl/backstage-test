@@ -23,6 +23,7 @@ spec:
         - packageName
         - packaging
         - javaVersion
+        - owner
       properties:
         project_name:
           title: Name of your Service
@@ -69,6 +70,18 @@ spec:
           type: string
           enum: ["21","17"]
           default: 21 
+        owner:
+          title: Choose an Owner for the Service
+          type: string
+          ui:field: OwnerPicker
+          ui:options:
+            allowedKinds:
+              - Group
+        token:
+          title: Harness Token
+          type: string
+          ui:widget: password
+          ui:field: HarnessAuthToken
   steps:
     - id: trigger
       name: Creating Your springboot service
@@ -86,6 +99,7 @@ spec:
           packageName: ${{ parameters.packageName }}
           packaging: ${{ parameters.packaging }}
           javaVersion: ${{ parameters.javaVersion }}
+        apikey: ${{ parameters.token }}      
     # The final step is to register our new component in the catalog.
   output:
     links:
