@@ -15,63 +15,86 @@ spec:
       required:
         - project_name
         - github_repo
-        - project_type
         - language
         - springBootVersion
+        - project_type
         - group
         - artifact
         - packageName
         - packaging
         - javaVersion
-        - owner
       properties:
         project_name:
-          title: Name of your Service
+          title: Name of your new app
           type: string
-          description: Unique name of the service
+          description: Unique name of the app
         github_repo:
-          title: Name of the Repository
+          title: Name of the GitHub repository
           type: string
           description: This will be the name of Repository on Github
         project_type:
-          title: what project you want to select from?
           type: string
-          enum: ["Gradle-Groovy","Gradle-Kotlin","Maven"]
-          default: Gradle-Groovy
+          title: Project
+          enum:
+            - Gradle-Groovy
+            - Gradle-Kotlin
+            - Maven
+          default: Maven
         language:
-          title: Select the Language
           type: string
-          enum: ["Java","Kotlin","Groovy"]
-          default: Groovy
+          title: Programming Language
+          enum:
+            - Java
+            - Kotlin
+            - Groovy
+          default: Java
         springBootVersion:
-          title: Select the springboot version
           type: string
-          enum: ["3.2.1","3.2.0","3.1.7","3.1.6"]
-          default: 3.2.1
+          title: Spring Boot Version
+          enum:
+            - 2.7.17
+            - 2.7.18 (SNAPSHOT)
+            - 3.0.12
+            - 3.0.13 (SNAPSHOT)
+            - 3.1.5
+            - 3.1.6 (SNAPSHOT)
+            - 3.2.0 (RC2)
+            - 3.2.0 (SNAPSHOT)
+          default: 3.1.5
         group:
-          title: Enter your Group
           type: string
-          description: This will be the group website
+          title: com.demo
+          default: com.example
         artifact:
-          title: Enter your artifact name
           type: string
-          description: asdf
+          title: Artifact ID
+          default: Default
+        name:
+          type: string
+          title: Project Name
+          default: Default Name for Spring Boot Project
         packageName:
-          title: Enter your package name
           type: string
-          description: asdf
+          title: com.example.demo
+          default: com.example.default
         packaging:
-          title: Select the package
           type: string
-          enum: ["jar","war"]
-          default: jar  
+          title: Packaging
+          enum:
+            - Jar
+            - War
+          default: Jar
         javaVersion:
-          title: Select the java version
           type: string
-          enum: ["21","17"]
-          default: 21 
+          title: Java Version
+          enum:
+            - "8"
+            - "11"
+            - "17"
+            - "21"
+          default: 21
         owner:
-          title: Choose an Owner for the Service
+          title: Choose an owner for the Service
           type: string
           ui:field: OwnerPicker
           ui:options:
@@ -105,3 +128,5 @@ spec:
     links:
       - title: Pipeline Details
         url: ${{ steps.trigger.output.PipelineUrl }}
+
+  
