@@ -36,10 +36,10 @@ spec:
           description: Give a Public Cookiecutter Template  
         repository_type:
           type: string
-          title: Project
+          title: Repository Type
           enum:
-            - Public
-            - Private
+            - public
+            - private
           default: Public
         repository_default_branch:
           title: Name of your Default Branch
