@@ -18,6 +18,7 @@ spec:
         - template_type
         - public_template_url
         - repository_type
+        - repositoty_description
         - repository_default_branch
         - direct_push_branch
         - slack_id
@@ -41,6 +42,10 @@ spec:
             - public
             - private
           default: Public
+        repositoty_description:
+          type: string
+          title: Add a description to your repo
+          description: Auto-generated using Self-Service-Flow of Harness-IDP 
         repository_default_branch:
           title: Name of your Default Branch
           type: string
@@ -77,6 +82,7 @@ spec:
           template_type: ${{ parameters.template_type }}
           public_template_url: ${{ parameters.public_template_url }}
           repository_type: ${{ parameters.repository_type }}
+          repositoty_description: ${{ parameters.repository_description }}
           repository_default_branch: ${{ parameters.repository_default_branch }}
           direct_push_branch: ${{ parameters.direct_push_branch }}
           slack_id: ${{ parameters.slack_id }}
