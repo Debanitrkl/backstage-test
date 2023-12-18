@@ -31,7 +31,7 @@ spec:
           ui:widget: password
           ui:field: HarnessAuthToken
   steps:
-    - id: harness
+    - id: trigger
       name: Creating your react app
       action: harness:create-and-trigger-pipeline
       input:
