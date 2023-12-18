@@ -31,9 +31,9 @@ spec:
           ui:widget: password
           ui:field: HarnessAuthToken
   steps:
-    - id: trigger
+    - id: harness
       name: Creating your react app
-      action: trigger:create-and-trigger-pipeline
+      action: harness:create-and-trigger-pipeline
       input:
         url: "https://stress.harness.io/ng/account/zEaak-FLS425IEO7OLzMUg/module/ci/orgs/default/projects/projctidp/pipelines/SelfServiceflowreposetup/pipeline-studio/?storeType=INLINE"
         inputSetName: ${{ parameters.inputSetName }}
