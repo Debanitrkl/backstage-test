@@ -33,7 +33,7 @@ spec:
   steps:
     - id: trigger
       name: Creating your react app
-      action: trigger:harness-custom-pipeline
+      action: harness:create-and-trigger-pipeline
       input:
         url: "https://stress.harness.io/ng/account/zEaak-FLS425IEO7OLzMUg/module/ci/orgs/default/projects/projctidp/pipelines/SelfServiceflowreposetup/pipeline-studio/?storeType=INLINE"
         inputSetName: ${{ parameters.inputSetName }}
