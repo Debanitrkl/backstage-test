@@ -15,7 +15,11 @@ spec:
     - title: Service Details
       required:
         - x_api_key
+        - triggerWebhookurl
       properties:
+        triggerWebhookurl:
+          title: trigger webhook URL
+          type: string
         x_api_key:
           title: Harness Token
           type: string 
@@ -25,7 +29,7 @@ spec:
       name: Creating your react app
       action: trigger:create-and-trigger-pipeline-with-inputset
       input:
-        triggerWebhookurl: "https://app.harness.io/gateway/pipeline/api/webhook/custom/v2?accountIdentifier=6h56F6WNQna2bDWBKfPMLw&orgIdentifier=default&projectIdentifier=Harnesspractise&pipelineIdentifier=asdf&triggerIdentifier=asdf"
+        triggerWebhookurl: ${{ parameters.triggerWebhookurl }}
         x_api_key: ${{ parameters.x_api_key }}
     # The final step is to register our new component in the catalog.
   output:
