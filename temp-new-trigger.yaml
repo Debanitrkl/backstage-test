@@ -14,17 +14,8 @@ spec:
   parameters:
     - title: Service Details
       required:
-        - inputSetName
-        - triggerName
+        - token
       properties:
-        inputSetName:
-          title: Name your Input Set
-          type: string
-          description: Unique Name for Inputset
-        triggerName:
-          title: Name for Trigger
-          type: string
-          description: Name for Trigger
         token:
           title: Harness Token
           type: string
@@ -35,9 +26,7 @@ spec:
       name: Creating your react app
       action: trigger:create-and-trigger-pipeline-with-inputset
       input:
-        url: "https://stress.harness.io/ng/account/zEaak-FLS425IEO7OLzMUg/module/cd/orgs/default/projects/projctidp/pipelines/SelfServiceflowreposetup/pipeline-studio?storeType=INLINE"
-        inputSetName: ${{ parameters.inputSetName }}
-        triggerName: ${{ parameters.triggerName }}
+        triggerWebhookurl: "https://app.harness.io/gateway/pipeline/api/webhook/custom/v2?accountIdentifier=6h56F6WNQna2bDWBKfPMLw&orgIdentifier=default&projectIdentifier=Harnesspractise&pipelineIdentifier=asdf&triggerIdentifier=asdf"
         apikey: ${{ parameters.token }}
     # The final step is to register our new component in the catalog.
   output:
