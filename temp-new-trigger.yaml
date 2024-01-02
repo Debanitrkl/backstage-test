@@ -14,7 +14,7 @@ spec:
   parameters:
     - title: Service Details
       required:
-        - token
+        - x_api_key
       properties:
         x_api_key:
           title: Harness Token
