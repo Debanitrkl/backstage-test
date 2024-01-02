@@ -18,7 +18,8 @@ spec:
       properties:
         x_api_key:
           title: Harness Token
-          type: string          
+          type: string 
+          ui:widget: password
   steps:
     - id: trigger
       name: Creating your react app
