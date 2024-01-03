@@ -12,7 +12,7 @@ spec:
   owner: debabrata.panigrahi@harness.io
   type: service
   parameters:
-    - title: Service Details
+    - title: Trigger Details
       required:
         - triggerWebhookurl
       properties:
