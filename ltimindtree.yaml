@@ -7,7 +7,6 @@ metadata:
     harness.io/pipelines: |
       labelA: https://app.harness.io/ng/account/Pw6qxF-VRFCe9FtTxpNgOA/cd/orgs/default/projects/default_project/pipelines/Deploy_Pipleine/pipeline-studio/?storeType=INLINE
       labelB: https://app.harness.io/ng/account/Pw6qxF-VRFCe9FtTxpNgOA/cd/orgs/default/projects/default_project/pipelines/testcreatedpipe/pipeline-studio/?storeType=INLINE
-   
    tags:
     - java
   links:
