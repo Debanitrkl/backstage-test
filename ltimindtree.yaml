@@ -1,0 +1,32 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: demo-lti-mindtree
+  description: pipeline build and deploy
+  annotations:
+    harness.io/pipelines: |
+      labelA: https://app.harness.io/ng/account/Pw6qxF-VRFCe9FtTxpNgOA/cd/orgs/default/projects/default_project/pipelines/Deploy_Pipleine/pipeline-studio/?storeType=INLINE
+      labelB: https://app.harness.io/ng/account/Pw6qxF-VRFCe9FtTxpNgOA/cd/orgs/default/projects/default_project/pipelines/testcreatedpipe/pipeline-studio/?storeType=INLINE
+   
+   tags:
+    - java
+  links:
+    - url: https://example.com/user
+      title: Examples Users
+      icon: user
+    - url: https://example.com/group
+      title: Example Group
+      icon: group
+    - url: https://example.com/cloud
+      title: Link with Cloud Icon
+      icon: cloud
+    - url: https://example.com/dashboard
+      title: Dashboard
+      icon: dashboard
+    - url: https://example.com/help
+      title: Support
+      icon: help
+spec:
+  type: service
+  lifecycle: experimental
+  owner: deba
