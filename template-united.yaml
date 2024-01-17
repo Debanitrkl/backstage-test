@@ -63,7 +63,7 @@ spec:
       name: Creating your java app
       action: trigger:harness-custom-pipeline
       input:
-        url: "https://app.harness.io/ng/account/vpCkHKsDSxK9_KYfjCTMKA/home/orgs/default/projects/communityeng/pipelines/IDP_New_NextJS_app/pipeline-studio/?storeType=INLINE"
+        url: "https://app.harness.io/ng/account/vpCkHKsDSxK9_KYfjCTMKA/module/ci/orgs/default/projects/communityeng/pipelines/uniteddemo/pipeline-studio/?storeType=INLINE"
         inputset:
           techstack: ${{ parameters.techstack }}
           version: ${{ parameters.version }}
