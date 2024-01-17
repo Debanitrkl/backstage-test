@@ -1,0 +1,78 @@
+apiVersion: scaffolder.backstage.io/v1beta3
+kind: Template
+metadata:
+  name: demo-java-app
+  title: Create a Java app
+  description: A template to create a new java app
+  tags:
+    - java
+spec:
+  owner: debabrata.panigrahi@harness.io
+  type: service
+  parameters:
+    - title: Java app details
+      required:
+        - techstack
+        - version
+        - buildSystem
+        - buildVersion
+      properties:       
+        techstack:
+          title: Name of the techstack
+          type: string
+          enum:
+            - Java
+            - Kotlin
+            - Groovy
+        version:
+          title: Your version number
+          type: string
+          enum:
+            - "8"
+            - "11"
+            - "17"
+            - "21"
+        buildSystem:
+          title: Name of the build system
+          type: string
+          enum:
+            - Gradle-Groovy
+            - Gradle-Kotlin
+            - Maven
+        buildVersion:
+          title: List all of the buld version
+          type: string
+          enum:
+            - maven3.1
+            - maven3.2
+        owner:
+          title: Choose an Owner for the Service
+          type: string
+          ui:field: OwnerPicker
+          ui:options:
+            allowedKinds:
+              - Group
+        # This field is hidden but needed to authenticate the request to trigger the pipeline
+        token:
+          title: Harness Token
+          type: string
+          ui:widget: password
+          ui:field: HarnessAuthToken
+  steps:
+    - id: trigger
+      name: Creating your java app
+      action: trigger:harness-custom-pipeline
+      input:
+        url: "https://app.harness.io/ng/account/vpCkHKsDSxK9_KYfjCTMKA/home/orgs/default/projects/communityeng/pipelines/IDP_New_NextJS_app/pipeline-studio/?storeType=INLINE"
+        inputset:
+          techstack: ${{ parameters.techstack }}
+          version: ${{ parameters.version }}
+          buildSystem: ${{ parameters.buildSystem }}
+          buildVersion: ${{ parameters.buildVersion }}
+        apikey: ${{ parameters.token }}
+    # The final step is to register our new component in the catalog.
+
+  output:
+    links:
+      - title: Pipeline Details
+        url: ${{ steps.trigger.output.PipelineUrl }}
