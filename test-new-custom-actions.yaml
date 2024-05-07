@@ -8,7 +8,7 @@ metadata:
     - nextjs
     - react
     - javascript
-  spec:
+spec:
   owner: debabrata.panigrahi
   type: service
   parameters:
