@@ -43,7 +43,7 @@ metadata:
       name: Creating your react app
       action: trigger:trigger-pipeline-with-webhook
       input:
-        url: https://qa.harness.io/ng/account/zEaak-FLS425IEO7OLzMUg/idp-admin/orgs/default/projects/idptestproject/pipelines/idpnewcustomaction/pipeline-studio/?storeType=INLINE
+        url: https://app.harness.io/ng/account/vpCkHKsDSxK9_KYfjCTMKA/module/idp-admin/orgs/default/projects/communityeng/pipelines/demonewcustomaction/pipeline-studio/?storeType=INLINE
         inputSetName: ${{ parameters.inputSetName }}
         triggerName: ${{ parameters.triggerName }}
         apikey: ${{ parameters.token }}
