@@ -12,9 +12,9 @@ metadata:
     backstage.io/techdocs-ref: dir:../
     lighthouse.com/website-url: https://harness.io
     harness.io/services: |
-      paymentService: https://app.harness.io/ng/account/IFG41DWvSnaRLOVNB2uesg/module/cd/orgs/demoorg/projects/paymentservice/services/paymentservice
+      paymentService: https://qa.harness.io/ng/account/zEaak-FLS425IEO7OLzMUg/cd/orgs/default/projects/idptestproject/services/sample_service_1681915149720
     harness.io/pipelines: |
-      paymentService: https://app.harness.io/ng/account/IFG41DWvSnaRLOVNB2uesg/module/ci/orgs/demoorg/projects/paymentservice/pipelines/harnesscicd/pipeline-studio?storeType=INLINE
+      paymentService: https://qa.harness.io/ng/account/zEaak-FLS425IEO7OLzMUg/cd/orgs/default/projects/idptestproject/pipelines/service_onboarding/pipeline-studio/?storeType=INLINE
 #  labels:
 #    key1: value1
   tags:
