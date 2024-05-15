@@ -21,6 +21,23 @@ spec:
           title: Name your Input Set
           type: string
           description: Unique Name for Inputset
+        tags:
+          title: Add new Key/Value pair for each tag
+          type: array
+          minItems: 0
+          ui:options:
+            addable: true
+            orderable: true
+            removable: true
+          items:
+            type: object
+            properties:
+              key:
+                title: Tag Key
+                type: string
+              value:
+                title: Tag Value
+                type: string
         triggerName:
           title: Name for Trigger
           type: string
