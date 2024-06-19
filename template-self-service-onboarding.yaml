@@ -104,6 +104,7 @@ spec:
           harness_org: ${{ parameters.harness_org }} 
           harness_project: ${{ parameters.harness_project }}
           harness_pipeline_name: ${{ parameters.harness_pipeline_name }}
+          owner: ${{ parameters.owner }}
         apikey: ${{ parameters.token }}
 
   output:
