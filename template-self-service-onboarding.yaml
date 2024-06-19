@@ -73,7 +73,7 @@ spec:
           title: Add the name of the new the pipeline
           type: string 
           description: make sure you dont add any space in between the pipeline name 
-        owner:
+        service_owner:
           title: Choose an Owner for the Service
           type: string
           ui:field: OwnerPicker
@@ -104,7 +104,7 @@ spec:
           harness_org: ${{ parameters.harness_org }} 
           harness_project: ${{ parameters.harness_project }}
           harness_pipeline_name: ${{ parameters.harness_pipeline_name }}
-          owner: ${{ parameters.owner }}
+          owner: ${{ parameters.service_owner }}
         apikey: ${{ parameters.token }}
 
   output:
