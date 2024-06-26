@@ -6,6 +6,8 @@ metadata:
   annotations:
        harness.io/pipelines: |
          labelA: https://idp-eu1-cluster.harness.io/ng/account/MzUzMzUyMWUtYWU4Yy00Mz/module/ci/orgs/prateekorg/projects/prateekproject/pipelines/buildpipeline/executions/?storeType=INLINE
+       harness.io/services: |
+         labelA: https://idp-eu1-cluster.harness.io/ng/account/MzUzMzUyMWUtYWU4Yy00Mz/module/cd/orgs/prateekorg/projects/prateekproject/services/sample
   tags:
     - java
   
