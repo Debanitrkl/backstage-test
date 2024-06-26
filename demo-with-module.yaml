@@ -5,7 +5,7 @@ metadata:
   description: pipeline build and deploy
   annotations:
        harness.io/pipelines: |
-         labelA: https://app.harness.io/ng/account/vpCkHKsDSxK9_KYfjCTMKA/module/idp-admin/orgs/default/projects/IDP_UI/pipelines/Build_IDP_UI_App_Custom_Plugin_Prod/pipeline-studio?storeType=INLINE
+         labelA: https://app.harness.io/ng/account/6h56F6WNQna2bDWBKfPMLw/module/cd/orgs/default/projects/communityeng/pipelines/nativeawslambda/pipeline-studio?storeType=INLINE
   tags:
     - java
   
