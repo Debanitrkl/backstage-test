@@ -5,8 +5,7 @@ metadata:
   description: pipeline build and deploy
   annotations:
        harness.io/workspace-url: |
-          workspaceA: https://qa.harness.io/ng/account/25NKDX79QPC-YTyninmxRQ/module/iacm/orgs/default/projects/Testim/workspaces/beta1/resources |
-          workspaceB: https://qa.harness.io/ng/account/25NKDX79QPC-YTyninmxRQ/module/iacm/orgs/default/projects/william/workspaces/cost/resources   
+          workspaceA: https://qa.harness.io/ng/account/zEaak-FLS425IEO7OLzMUg/module/iacm/orgs/default/projects/idpprojectsc/workspaces/demo/resources
   tags:
     - java
   
