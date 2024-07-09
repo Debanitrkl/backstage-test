@@ -1,0 +1,9 @@
+apiVersion: backstage.io/v1alpha1
+kind: Location
+metadata:
+  name: example-domains
+  description: A collection of all IDP example domains
+spec:
+  targets:
+    - ./domains/capital-domain.yaml
+    - ./domains/commercial-domain.yaml
