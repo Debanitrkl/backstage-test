@@ -39,4 +39,4 @@ metadata:
 spec:
   type: service
   lifecycle: experimental
-  owner: ccmplayacc
+  owner: debabrata.panigrahi
