@@ -26,7 +26,18 @@ pipeline:
                   spec:
                     connectorType: Github
                     connectorRef: account.debagithub
-                    organization: Debanitrkl
-                    repository: test-backstage-gitsync
+                    organization: <+pipeline.variables.organisation>
+                    repository: <+pipeline.variables.repository>
                     repoType: public
         tags: {}
+  variables:
+    - name: organisation
+      type: String
+      description: ""
+      required: false
+      value: <+input>
+    - name: repository
+      type: String
+      description: ""
+      required: false
+      value: <+input>
