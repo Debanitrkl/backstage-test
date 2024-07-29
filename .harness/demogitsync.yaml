@@ -25,9 +25,9 @@ pipeline:
                   identifier: CreateRepo_1
                   spec:
                     connectorType: Github
-                    connectorRef: account.debagithub
-                    organization: Debanitrkl
-                    repository: test-demo-denan
+                    connectorRef: deveshconn
+                    organization: test-org-devesh
+                    repository: test-demo-denanasdad
                     repoType: public
                     defaultBranch: main
         tags: {}
