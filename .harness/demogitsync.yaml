@@ -31,14 +31,3 @@ pipeline:
                     repoType: public
                     defaultBranch: main
         tags: {}
-  variables:
-    - name: org
-      type: String
-      description: ""
-      required: false
-      value: <+input>
-    - name: repository
-      type: String
-      description: ""
-      required: false
-      value: <+input>
