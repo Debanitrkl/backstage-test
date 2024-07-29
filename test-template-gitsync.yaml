@@ -32,7 +32,7 @@ spec:
     - id: trigger
       name: Creating your github repository
       action: trigger:harness-custom-pipeline
-      input:
+      inputset:
         url: https://qa.harness.io/ng/account/zEaak-FLS425IEO7OLzMUg/module/idp-admin/orgs/default/projects/idpprojectsc/pipelines/demogitsync/pipeline-studio/?branch=main-patch&repoName=backstage-test&connectorRef=account.debagithub&storeType=REMOTE&stageId=createrepo&sectionId=EXECUTION
         organisation: ${{ parameters.organisation }}
         repository: ${{ parameters.repository }}
