@@ -26,9 +26,10 @@ pipeline:
                   spec:
                     connectorType: Github
                     connectorRef: account.debagithub
-                    organization: <+pipeline.variables.org>
-                    repository: <+pipeline.variables.repository>
+                    organization: Debanitrkl
+                    repository: test-demo-denan
                     repoType: public
+                    defaultBranch: main
         tags: {}
   variables:
     - name: org
