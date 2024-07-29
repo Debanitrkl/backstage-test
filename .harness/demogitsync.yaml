@@ -1,0 +1,32 @@
+pipeline:
+  name: demo-gitsync
+  identifier: demogitsync
+  projectIdentifier: idpprojectsc
+  orgIdentifier: default
+  tags: {}
+  stages:
+    - stage:
+        name: create-repo
+        identifier: createrepo
+        description: ""
+        type: IDP
+        spec:
+          platform:
+            os: Linux
+            arch: Amd64
+          runtime:
+            type: Cloud
+            spec: {}
+          execution:
+            steps:
+              - step:
+                  type: CreateRepo
+                  name: CreateRepo_1
+                  identifier: CreateRepo_1
+                  spec:
+                    connectorType: Github
+                    connectorRef: account.debagithub
+                    organization: Debanitrkl
+                    repository: test-backstage-gitsync
+                    repoType: public
+        tags: {}
