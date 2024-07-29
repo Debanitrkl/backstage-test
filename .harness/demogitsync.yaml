@@ -26,8 +26,19 @@ pipeline:
                   spec:
                     connectorType: Github
                     connectorRef: deveshconn
-                    organization: test-org-devesh
-                    repository: test-demo-denanasdad
+                    organization: <+pipeline.variables.organisation>
+                    repository: <+pipeline.variables.repository>
                     repoType: public
                     defaultBranch: main
         tags: {}
+  variables:
+    - name: organisation
+      type: String
+      description: ""
+      required: false
+      value: <+input>
+    - name: repository
+      type: String
+      description: ""
+      required: false
+      value: <+input>
