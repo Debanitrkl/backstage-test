@@ -26,12 +26,12 @@ pipeline:
                   spec:
                     connectorType: Github
                     connectorRef: account.debagithub
-                    organization: <+pipeline.variables.organisation>
+                    organization: <+pipeline.variables.org>
                     repository: <+pipeline.variables.repository>
                     repoType: public
         tags: {}
   variables:
-    - name: organisation
+    - name: org
       type: String
       description: ""
       required: false
