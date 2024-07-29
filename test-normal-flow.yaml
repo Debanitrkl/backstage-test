@@ -35,8 +35,8 @@ spec:
       input:
         url: https://qa.harness.io/ng/account/zEaak-FLS425IEO7OLzMUg/module/idp-admin/orgs/default/projects/idpprojectsc/pipelines/creategithubrepo_and_add_user/pipeline-studio?storeType=INLINE&stageId=demo&sectionId=EXECUTION
         inputset: 
-          organisation: ${{ parameters.organisation }}
-          repository: ${{ parameters.repository }}
+          github_org: ${{ parameters.organisation }}
+          github_repo: ${{ parameters.repository }}
         apikey: ${{ parameters.token }}
   output:
     links:
