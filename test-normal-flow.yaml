@@ -1,8 +1,8 @@
 apiVersion: scaffolder.backstage.io/v1beta3
 kind: Template
 metadata:
-  name: new-custom-action-gitsync
-  title: Test the new custom action for git sync
+  name: new-custom-action
+  title: Test the new custom 
   description: A template to test the new custom action
   tags:
     - nextjs
