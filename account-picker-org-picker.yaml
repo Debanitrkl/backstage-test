@@ -13,17 +13,19 @@ spec:
   type: service
   parameters:
     - title: Next.js app details
+      required:
+        - projectId
       properties:
-         projectId:
-           title: Project Identifier
-           description: Harness Project Identifier
-           type: string
-           ui:field: HarnessProjectPicker
-         orgId:
-           title: Org Identifier
-           description: Harness org Identifier
-           type: string
-           ui:field: HarnessAutoOrgPicker
+        projectId:
+          title: Name of your new app
+          type: string
+          description: Unique name of the app
+          ui:field: HarnessProjectPicker
+        orgId:
+          title: Name of the Gitlab Organisation
+          type: string
+          description: This will be the name of Organisation on Gitlab
+          ui:field: HarnessAutoOrgPicker   
         token:
           title: Harness Token
           type: string
