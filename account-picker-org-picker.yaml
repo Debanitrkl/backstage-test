@@ -12,8 +12,8 @@ spec:
   owner: debabrata.panigrahi@harness.io
   type: service
   parameters:
-    - title: Details
-       properties:
+    - title: Next.js app details
+      properties:
          projectId:
            title: Project Identifier
            description: Harness Project Identifier
@@ -23,7 +23,7 @@ spec:
            title: Org Identifier
            description: Harness org Identifier
            type: string
-           ui:field: HarnessAutoOrgPicker 
+           ui:field: HarnessAutoOrgPicker
         token:
           title: Harness Token
           type: string
