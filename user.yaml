@@ -1,0 +1,10 @@
+apiVersion: backstage.io/v1alpha1
+kind: User
+metadata:
+  name: Debabrata Panigrahi
+spec:
+  profile:
+    displayName: Deba
+    email: debabrata.panigrahi@harness.io
+    picture: https://example.com/staff/jenny-with-party-hat.jpeg
+  memberOf: [IDP]
