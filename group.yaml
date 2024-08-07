@@ -1,0 +1,14 @@
+apiVersion: backstage.io/v1alpha1
+kind: Group
+metadata:
+  name: internal-developer-portal
+  description: The IDP team
+spec:
+  type: business-unit
+  profile:
+    displayName: IDP
+    email: idp@harness.io
+    picture: https://example.com/groups/bu-infrastructure.jpeg
+  parent: ops
+  children: [backend, other]
+  members: [debabrata]
