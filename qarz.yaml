@@ -1,0 +1,44 @@
+apiVersion: scaffolder.backstage.io/v1beta3
+kind: Template
+metadata:
+  name: new-custom-action
+  title: Test the new custom 
+  description: A template to test the new custom action
+  tags:
+    - nextjs
+    - react
+    - javascript
+spec:
+  owner: debabrata.panigrahi
+  type: service
+  parameters:
+    - title: Repository Name
+      required:
+        - organisation
+        - repository
+      properties:
+        organisation:
+          title: Name your organisation
+          type: string
+        repository:
+          title: Name your repository
+          type: string
+        token:
+          title: Harness Token
+          type: string
+          ui:widget: password
+          ui:field: HarnessAuthToken
+  steps:
+    - id: trigger
+      name: Creating your github repository
+      action: trigger:harness-custom-pipeline
+      input:
+        url: https://qa.harness.io/ng/account/rzjR8UyZTpOAd6SLDfdBuw/module/idp-admin/orgs/default/projects/idptest/pipelines/demo/pipeline-studio?storeType=INLINE
+        inputset: 
+          organisation: ${{ parameters.organisation }}
+          repository: ${{ parameters.repository }}
+        apikey: ${{ parameters.token }}
+  output:
+    links:
+      - title: Pipeline Details
+        url: ${{ steps.trigger.output.PipelineUrl }}
