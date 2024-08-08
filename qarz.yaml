@@ -23,6 +23,24 @@ spec:
         repository:
           title: Name your repository
           type: string
+        projectId:
+          title: Project Identifier
+          description: Harness Project Identifier
+          type: string
+          ui:field: HarnessProjectPicker
+        orgId:
+          title: Org Identifier
+          description: Harness org Identifier
+          type: string
+          ui:field: HarnessAutoOrgPicker  
+        owner:
+          title: Owner
+          type: string
+          description: Owner of the component
+          ui:field: OwnerPicker
+          ui:options:
+            catalogFilter:
+              kind: Group
         token:
           title: Harness Token
           type: string
