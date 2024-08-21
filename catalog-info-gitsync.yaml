@@ -1,0 +1,33 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: demo-service-with-module
+  description: pipeline build and deploy
+  annotations:
+    harness.io/pipelines: |
+      CI: https://qa.harness.io/ng/account/zEaak-FLS425IEO7OLzMUg/module/cd/orgs/default/projects/idpprojectsc/pipelines/idp/pipeline-studio?storeType=INLINE
+    harness.io/services: |
+      serviceA: https://qa.harness.io/ng/account/zEaak-FLS425IEO7OLzMUg/module/cd/orgs/default/projects/idpprojectsc/services/demoservice?storeType=REMOTE&connectorRef=account.debagithub&repoName=backstage-test&branch=main
+  tags:
+    - java
+  
+  links:
+    - url: https://example.com/user
+      title: Examples Users
+      icon: user
+    - url: https://example.com/group
+      title: Example Group
+      icon: group
+    - url: https://example.com/cloud
+      title: Link with Cloud Icon
+      icon: cloud
+    - url: https://example.com/dashboard
+      title: Dashboard
+      icon: dashboard
+    - url: https://example.com/help
+      title: Support
+      icon: help
+spec:
+  type: service
+  lifecycle: experimental
+  owner: idpplayacc
