@@ -1,0 +1,93 @@
+apiVersion: scaffolder.backstage.io/v1beta3
+kind: Template
+metadata:
+  name: github-repo-app
+  title: Create a GitHub repo
+  description: A template to create a Github repo
+  tags:
+    - nodejs
+    - react
+    - javascript
+spec:
+  type: service
+  parameters:
+    - title: GitHub Repo
+      required:
+        - project_name
+        - github_repo
+      properties:
+        user_id:
+          title: Select User
+          type: string
+          ui:field: DropdownPicker
+          ui:options:
+            label: Select a user from the list
+          external_data:
+            apiEndpoint: https://jsder.typicode.com/users
+            method: GET
+            fieldMapping:
+              label: name
+              value: id
+        project_name:
+          title: Choose Project
+          type: string
+          ui:field: OwnerPicker
+          ui:options:
+            allowedKinds:
+              - Project
+            dynamicData:
+              apiEndpoint: https://app.harness.io/v1/orgs/Prod/projects
+              method: GET
+              headers:
+                x-api-key: ${{ secrets.HARNESS_API_KEY }}
+                Harness-Account: ${{ secrets.HARNESS_ACCOUNT_ID }}
+              fieldMapping:
+                label: ${project.name} (${project.identifier})
+                value: ${project.identifier}
+        asset_id:
+          title: Choose Asset ID
+          type: string
+          ui:field: DropdownPicker
+          ui:options:
+            label: Select a asset from the list
+          external_data:
+            apiEndpoint: https://alm713.dswh.ds.com/getAllProjects
+            method: GET
+            fieldMapping:
+              label: name
+              value: id
+        github_repo:
+          title: Name of the GitHub repository
+          type: string
+          description: This will be the name of Repository on Github
+    - title: Service Infrastructure Details
+      required:
+        - owner
+      properties:
+        owner:
+          title: Choose an Owner for the Service
+          type: string
+          ui:field: OwnerPicker
+          ui:options:
+            allowedKinds:
+              - User
+        token:
+          title: Harness Token
+          type: string
+          ui:widget: password
+          ui:field: HarnessAuthToken
+  steps:
+    - id: trigger
+      name: Creating your react app
+      action: trigger:harness-custom-pipeline
+      input:
+        url: https://app3.harness.io/ng/account/2w/module/cd/orgs/Prod/projects/tforms/pipelines/IDP_GitHub/pipeline-studio?storeType=INLINE
+        inputset:
+          project_name: ${{ parameters.project_name }}
+          github_repo: ${{ parameters.github_repo }}
+          cloud_provider: ${{ parameters.provider }}
+        apikey: ${{ parameters.token }}
+  output:
+    links:
+      - title: Pipeline Details
+        url: ${{ steps.trigger.output.PipelineUrl }}
