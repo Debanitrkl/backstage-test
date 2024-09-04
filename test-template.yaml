@@ -6,8 +6,6 @@ metadata:
   description: A template to test the new custom action
   tags:
     - nextjs
-    - react
-    - javascript
 spec:
   owner: debabrata.panigrahi
   type: service
