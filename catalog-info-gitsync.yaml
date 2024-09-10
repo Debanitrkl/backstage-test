@@ -8,6 +8,8 @@ metadata:
       CI: https://qa.harness.io/ng/account/zEaak-FLS425IEO7OLzMUg/module/cd/orgs/default/projects/idpprojectsc/pipelines/idp/pipeline-studio?storeType=INLINE
     harness.io/services: |
       serviceA: https://qa.harness.io/ng/account/zEaak-FLS425IEO7OLzMUg/module/cd/orgs/default/projects/idpprojectsc/services/demoservice?storeType=REMOTE&connectorRef=account.debagithub&repoName=backstage-test&branch=main
+    harness.io/perspective-url: https://qa.harness.io/ng/account/zEaak-FLS425IEO7OLzMUg/module/ce/perspectives
+      
   tags:
     - java
   
