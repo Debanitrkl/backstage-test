@@ -1,8 +1,8 @@
 apiVersion: scaffolder.backstage.io/v1beta3
 kind: Template
 metadata:
-  name: test-template-pipeline
-  title: Test pipeline using templates
+  name: test-template-pipeline-new
+  title: Template not on main branch
   description: A template to test the new custom action
   tags:
     - nextjs
