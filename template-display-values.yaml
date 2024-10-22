@@ -1,0 +1,57 @@
+apiVersion: scaffolder.backstage.io/v1beta3
+kind: Template
+metadata:
+  name: example-display-values
+  title: Example Display Values Template
+  description: A template to display previously entered values on another page
+spec:
+  owner: owner@company.com
+  type: service
+  parameters:
+    - title: Service Details
+      type: object
+      required:
+        - service_name
+        - environment_type
+      properties:
+        service_name:
+          title: Service Name
+          type: string
+          description: Enter the name of the service you are creating
+        environment_type:
+          title: Environment Type
+          type: string
+          description: Choose the environment
+          enum:
+            - dev
+            - staging
+            - prod
+      ui:page: 1   # Page 1 - Service Details
+
+    - title: Review and Confirm
+      type: object
+      properties:
+        review:
+          type: string
+          title: Review Entered Details
+          description: |
+            Please review the details you have entered below:
+
+            **Service Name:** ${{ parameters.service_name }}
+            **Environment Type:** ${{ parameters.environment_type }}
+          ui:widget: markdown   # Use markdown to format and display the values entered
+      ui:page: 2   # Page 2 - Review Page
+  steps:
+    - id: trigger
+      name: Provision Service
+      action: trigger:harness-custom-pipeline
+      input:
+        url: "YOUR_PIPELINE_URL"
+        inputset:
+          service_name: ${{ parameters.service_name }}
+          environment_type: ${{ parameters.environment_type }}
+        apikey: ${{ parameters.token }}
+  output:
+    links:
+      - title: Pipeline Details
+        url: ${{ steps.trigger.output.PipelineUrl }}
