@@ -26,21 +26,28 @@ spec:
             - dev
             - staging
             - prod
-      ui:page: 1   # Page 1 - Service Details
 
     - title: Review and Confirm
       type: object
       properties:
-        review:
+        review_service_name:
           type: string
-          title: Review Entered Details
-          description: |
-            Please review the details you have entered below:
-
-            **Service Name:** ${{ parameters.service_name }}
-            **Environment Type:** ${{ parameters.environment_type }}
-          ui:widget: markdown   # Use markdown to format and display the values entered
-      ui:page: 2   # Page 2 - Review Page
+          title: Service Name (Review)
+          description: The service name you entered
+          default: ${{ parameters.service_name }}  # Display the entered service name
+          ui:field: TextArea
+          ui:options:
+            rows: 1
+            readonly: true  # Make the field read-only
+        review_environment_type:
+          type: string
+          title: Environment Type (Review)
+          description: The environment type you selected
+          default: ${{ parameters.environment_type }}  # Display the entered environment type
+          ui:field: TextArea
+          ui:options:
+            rows: 1
+            readonly: true  # Make the field read-only
   steps:
     - id: trigger
       name: Provision Service
