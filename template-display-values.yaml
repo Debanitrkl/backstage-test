@@ -33,21 +33,21 @@ spec:
         review_service_name:
           type: string
           title: Service Name (Review)
-          description: The service name you entered
-          default: ${{ parameters.service_name }}  # Display the entered service name
+          description: Review the service name you entered
           ui:field: TextArea
           ui:options:
             rows: 1
             readonly: true  # Make the field read-only
+          placeholder: ${{ parameters.service_name }}  # Display the service name
         review_environment_type:
           type: string
           title: Environment Type (Review)
-          description: The environment type you selected
-          default: ${{ parameters.environment_type }}  # Display the entered environment type
+          description: Review the environment type you selected
           ui:field: TextArea
           ui:options:
             rows: 1
             readonly: true  # Make the field read-only
+          placeholder: ${{ parameters.environment_type }}  # Display the environment type
   steps:
     - id: trigger
       name: Provision Service
