@@ -31,11 +31,11 @@ spec:
       name: Creating your github repository
       action: trigger:harness-custom-pipeline
       input:
-        url: https://qa.harness.io/ng/account/zEaak-FLS425IEO7OLzMUg/module/idp-admin/orgs/default/projects/idpprojectsc/pipelines/demoworkflowstemplates/pipeline-studio/?storeType=INLINE
+        url: https://qa.harness.io/ng/account/<+account.identifier>/module/idp-admin/orgs/default/projects/idpprojectsc/pipelines/demoworkflowstemplates/pipeline-studio/?storeType=INLINE
         inputset: 
           organisation: ${{ parameters.organisation }}
           repository: ${{ parameters.repository }}
-        apikey: ${{ parameters.token }}
+        apikey:  ${{ <+secrets.getValue("account.bb_server")> }}
   output:
     links:
       - title: Pipeline Details
