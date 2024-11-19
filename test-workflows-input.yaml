@@ -1,8 +1,8 @@
 apiVersion: scaffolder.backstage.io/v1beta3
 kind: Template
 metadata:
-  name: test-template-pipeline
-  title: Test pipeline using templates
+  name: test-template-pipeline-ac-variable
+  title: Test pipeline using templates with account varaibles
   description: A template to test the new custom action
   tags:
     - nextjs
@@ -35,7 +35,7 @@ spec:
         inputset: 
           organisation: ${{ parameters.organisation }}
           repository: ${{ parameters.repository }}
-        apikey:  ${{ <+secrets.getValue("account.bb_server")> }}
+        apikey:  ${{ parameters.token }}
   output:
     links:
       - title: Pipeline Details
