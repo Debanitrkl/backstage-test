@@ -4,17 +4,6 @@ spec:
   lifecycle: prod
   owner: customer_success
   system: Platform_Demo
-  dependsOn:
-    - component:boutique-adservice
-    - component:boutique-checkoutservice
-    - component:boutique-currencyservice
-    - component:boutique-emailservice
-    - component:boutique-loadgenerator
-    - component:boutique-paymentservice
-    - component:boutique-productcatalogservice
-  providesApis:
-    - petstore
-    - starwars-graphql
 apiVersion: backstage.io/v1alpha1
 metadata:
   name: boutique-frontend
@@ -22,15 +11,15 @@ metadata:
   links:
     - url: http://34.57.7.165/
       title: Prod Website
-      icon: azure-resource-manager
+      icon: dpd
       type: Boutique FrontEnd
     - url: http://34.28.46.65
       title: QA Website
-      icon: Account
+      icon: douban
       type: Boutique FrontEnd
     - url: http://34.35.60.81/
       title: Dev Website
-      icon: dashboard
+      icon: dask
       type: Boutique FrontEnd
     - url: https://app.harness.io/ng/account/6_vVHzo9Qeu9fXvj-AcbCQ/module/sei/orgs/default/projects/SEIDemo/dashboards/13?OU=7&workspace_id=1&from=1706745600&to=17599
       title: Dora Metrics [SEI]
@@ -42,7 +31,7 @@ metadata:
       type: Boutique FrontEnd
     - url: https://app.pluralsight.com/id?_gl=1*t8n96s*_ga*MTA1ODk3OTA0NC4xNzE2Mzg3MTE2*_ga_525M96C6Y1*MTcxNjQwNzY1OS4yLjAuMTcxNjQwNzY2MS41OC4wLjA.*_gcl_au*MTAxOTcxMTg3LjE3MTYzODcxMjA.&_ga=2.28218548.989823681.1716387120-1058979044.1716387116
       title: Team Training Progress
-      icon: service-pagerduty
+      icon: amazonecs
       type: Boutique FrontEnd
   tags: 
     - go
