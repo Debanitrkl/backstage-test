@@ -11,8 +11,6 @@ nav:
 plugins:
   - techdocs-core
   - search
-  - mkdocs-git-authors-plugin:
-      combine: true
   - mkdocs-git-revision-date-localized-plugin:
       timezone: "America/New_York"
       date_format: "%B %d, %Y"
