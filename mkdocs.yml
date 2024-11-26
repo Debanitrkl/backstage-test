@@ -19,7 +19,6 @@ plugins:
             show_source: true
         crystal: {}
         vba: {}
-  - mkdocs-minify-plugin
 
 theme:
   name: material
