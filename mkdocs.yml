@@ -1,0 +1,39 @@
+site_name: "Plugin Showcase Documentation"
+nav:
+  - Home: index.md
+  - Gallery: gallery.md
+  - Contributors: contributors.md
+  - Videos: videos.md
+  - Redirects:
+      - Old Page: old-page.md
+      - New Page: new-page.md
+
+plugins:
+  - search
+  - mkdocs-glightbox:
+      default_gallery: true
+  - mkdocs-git-authors-plugin:
+      combine: true
+  - mkdocs-git-revision-date-localized-plugin:
+      timezone: "America/New_York"
+      date_format: "%B %d, %Y"
+  - mkdocs-video
+  - mkdocs-material-extensions
+  - mkdocs-redirects:
+      redirects:
+        old-page.md: new-page.md
+  - mkdocs-awesome-pages-plugin
+  - mkdocstrings:
+      handlers:
+        python:
+          options:
+            show_source: true
+        crystal: {}
+        vba: {}
+  - mkdocs-minify-plugin
+  - techdocs-core
+
+theme:
+  name: material
+  features:
+    - tabs
