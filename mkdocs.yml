@@ -12,9 +12,6 @@ plugins:
   - techdocs-core
   - search
   - mkdocs-video
-  - mkdocs-redirects:
-      redirects:
-        old-page.md: new-page.md
   - mkdocs-awesome-pages-plugin
   - mkdocstrings:
       handlers:
