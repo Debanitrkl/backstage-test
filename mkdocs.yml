@@ -9,6 +9,7 @@ nav:
       - New Page: new-page.md
 
 plugins:
+  - techdocs-core
   - search
   - mkdocs-git-authors-plugin:
       combine: true
@@ -29,7 +30,6 @@ plugins:
         crystal: {}
         vba: {}
   - mkdocs-minify-plugin
-  - techdocs-core
 
 theme:
   name: material
