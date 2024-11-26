@@ -11,9 +11,6 @@ nav:
 plugins:
   - techdocs-core
   - search
-  - mkdocs-git-revision-date-localized-plugin:
-      timezone: "America/New_York"
-      date_format: "%B %d, %Y"
   - mkdocs-video
   - mkdocs-material-extensions
   - mkdocs-redirects:
