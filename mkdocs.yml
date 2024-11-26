@@ -12,7 +12,6 @@ plugins:
   - techdocs-core
   - search
   - mkdocs-video
-  - mkdocs-awesome-pages-plugin
   - mkdocstrings:
       handlers:
         python:
