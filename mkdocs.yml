@@ -10,8 +10,6 @@ nav:
 
 plugins:
   - search
-  - mkdocs-glightbox:
-      default_gallery: true
   - mkdocs-git-authors-plugin:
       combine: true
   - mkdocs-git-revision-date-localized-plugin:
