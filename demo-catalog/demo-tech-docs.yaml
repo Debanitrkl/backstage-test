@@ -8,7 +8,7 @@ metadata:
          labelA: https://app.harness.io/ng/account/6h56F6WNQna2bDWBKfPMLw/module/cd/orgs/default/projects/communityeng/pipelines/nativeawslambda/pipeline-studio?storeType=INLINE
        jira/project-key: IDP
        github.com/project-slug: Debanitrkl/backstage-test
-       backstage.io/techdocs-ref: url:https://github.com/backstage/backstage/tree/master/plugins/techdocs-backend/examples/documented-component
+       backstage.io/techdocs-ref: url:https://github.com/Debanitrkl/backstage-test/tree/main
        pagerduty.com/service-id: P09N5FE
        pagerduty.com/integration-key: R03DT3PRH1SU1J014M3FQDUQB53B4CUH
   tags:
