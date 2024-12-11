@@ -18,6 +18,10 @@ spec:
           type: string
           format: file
           description: Upload a file that will be processed in the workflow
+          ui:backstage:
+            review:
+              show: false
+              mask: true
         token:
           title: Harness Token
           type: string
