@@ -1,0 +1,38 @@
+apiVersion: scaffolder.backstage.io/v1beta3
+kind: Template
+metadata:
+  name: file-input-template
+  title: File Input Template
+  description: A template to upload a file and process its content
+spec:
+  owner: owner@company.com
+  type: service
+  parameters:
+    - title: File Upload
+      type: object
+      required:
+        - uploaded_file
+      properties:
+        uploaded_file:
+          title: Upload File
+          type: string
+          format: file
+          description: Upload a file that will be processed in the workflow
+        token:
+          title: Harness Token
+          type: string
+          ui:widget: password
+          ui:field: HarnessAuthToken
+  steps:
+    - id: trigger
+      name: Creating your github repository
+      action: trigger:harness-custom-pipeline
+      input:
+        url: https://qa.harness.io/ng/account/zEaak-FLS425IEO7OLzMUg/module/idp-admin/orgs/default/projects/idpprojectsc/pipelines/processfilesuploadedusingjsonschema/pipeline-studio
+        inputset: 
+          uploadedFile: ${{ parameters.uploaded_file }}
+        apikey: ${{ parameters.token }}
+  output:
+    links:
+      - title: Pipeline Details
+        url: ${{ steps.trigger.output.PipelineUrl }}
