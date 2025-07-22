@@ -1,0 +1,32 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: Todd-example-service
+  description: |
+    Todd Example service which has something to do with APIs and database.
+  links:
+    - title: Website
+      url: http://harness.io
+  annotations:
+    github.com/project-slug: harnessworkshop/idp-workshop
+    backstage.io/techdocs-ref: dir:../
+    lighthouse.com/website-url: https://harness.io
+    harness.io/services: |
+      paymentService: https://qa.harness.io/ng/account/zEaak-FLS425IEO7OLzMUg/cd/orgs/default/projects/idptestproject/services/sample_service_1681915149720
+    harness.io/pipelines: |
+      paymentService: https://qa.harness.io/ng/account/zEaak-FLS425IEO7OLzMUg/cd/orgs/default/projects/idptestproject/pipelines/service_onboarding/pipeline-studio/?storeType=INLINE
+#  labels:
+#    key1: value1
+  tags:
+    - toddparson
+spec:
+  type: service
+  owner: TeamA
+  lifecycle: experimental
+#  system: Demo
+#  dependsOn:
+#    - component:default/fill-in-your-name-service
+#  consumesApis:
+#    - user-api
+#  providesApis:
+#    - example-api

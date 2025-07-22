@@ -1,0 +1,44 @@
+kind: Component
+spec:
+  type: Service
+  lifecycle: prod
+  owner: customer_success
+  system: Platform_Demo
+apiVersion: backstage.io/v1alpha1
+metadata:
+  name: boutique-frontend
+  description: Frontend for the boutique online store
+  links:
+    - url: http://34.57.7.165/
+      title: Prod Website
+      icon: dpd
+      type: Boutique FrontEnd
+    - url: http://34.28.46.65
+      title: QA Website
+      icon: douban
+      type: Boutique FrontEnd
+    - url: http://34.35.60.81/
+      title: Dev Website
+      icon: dask
+      type: Boutique FrontEnd
+    - url: https://app.harness.io/ng/account/6_vVHzo9Qeu9fXvj-AcbCQ/module/sei/orgs/default/projects/SEIDemo/dashboards/13?OU=7&workspace_id=1&from=1706745600&to=17599
+      title: Dora Metrics [SEI]
+      icon: dts
+      type: Boutique FrontEnd
+    - url: https://app.harness.io/ng/account/6_vu9fXvj-AcbCQ/module/cd/orgs/default/projects/Platform_Demo/pipelines/End_to_End_Commercial/deployments/Zfti1rw5QJCt9Dbp_-ZzOQ/tests
+      title: Testing Metrics
+      icon: dashboard
+      type: Boutique FrontEnd
+    - url: https://app.pluralsight.com/id?_gl=1*t8n96s*_ga*MTA1ODk3OTA0NC4xNzE2Mzg3MTE2*_ga_525M96C6Y1*MTcxNjQwNzY1OS4yLjAuMTcxNjQwNzY2MS41OC4wLjA.*_gcl_au*MTAxOTcxMTg3LjE3MTYzODcxMjA.&_ga=2.28218548.989823681.1716387120-1058979044.1716387116
+      title: Team Training Progress
+      icon: amazonecs
+      type: Boutique FrontEnd
+  tags: 
+    - go
+  annotations:
+    # For Harness CI/CD and SRM plugins
+    harness.io/pipelines: |
+      Build and Deploy: https://app.harness.io/ng/account/6_vVHzo9Qeu9fXvj-AcbCQ/module/cd/orgs/default/projects/Platform_Demo/pipelines/IaCM_Provision_EC2_Instance/pipeline-studio?storeType=INLINE
+      Infrastructure: https://app.harness.io/ng/account/6_vVHzo9Qeu9fXvj-AcbCQ/module/cd/orgs/default/projects/Platform_Demo/pipelines/EndtoEnd_Pipeline_SVC_Redesign/pipeline-studio?storeType=INLINE
+    harness.io/services: |
+      boutique_frontend: https://app.harness.io/ng/account/6_vVHzo9Qeu9fXvj-AcbCQ/module/cd/orgs/default/projects/Platform_Demo/services/Boutique_Frontend

@@ -1,0 +1,26 @@
+site_name: "Plugin Showcase Documentation"
+nav:
+  - Home: index.md
+  - Gallery: gallery.md
+  - Contributors: contributors.md
+  - Videos: videos.md
+  - Redirects:
+      - Old Page: old-page.md
+      - New Page: new-page.md
+
+plugins:
+  - techdocs-core
+  - search
+  - mkdocs-video
+  - mkdocstrings:
+      handlers:
+        python:
+          options:
+            show_source: true
+        crystal: {}
+        vba: {}
+
+theme:
+  name: material
+  features:
+    - tabs

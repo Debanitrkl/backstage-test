@@ -1,0 +1,8 @@
+service:
+  name: demo-service
+  identifier: demoservice
+  orgIdentifier: default
+  projectIdentifier: idpprojectsc
+  serviceDefinition:
+    spec: {}
+    type: Kubernetes

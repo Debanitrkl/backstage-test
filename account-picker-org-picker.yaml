@@ -1,0 +1,50 @@
+apiVersion: scaffolder.backstage.io/v1beta3
+kind: Template
+metadata:
+  name: onboard-services
+  title: Create and Onboard a new react app
+  description: A template to create and onboard a new react app
+  tags:
+    - nextjs
+    - react
+    - javascript
+spec:
+  owner: debabrata.panigrahi@harness.io
+  type: service
+  parameters:
+    - title: Next.js app details
+      required:
+        - projectId
+      properties:
+        projectId:
+          title: Name of your new app
+          type: string
+          description: Unique name of the app
+          ui:field: HarnessProjectPicker
+        orgId:
+          title: Name of the Gitlab Organisation
+          type: string
+          description: This will be the name of Organisation on Gitlab
+          ui:field: HarnessAutoOrgPicker   
+        token:
+          title: Harness Token
+          type: string
+          ui:widget: password
+          ui:field: HarnessAuthToken
+  steps:
+    - id: trigger
+      name: Creating your react app
+      action: trigger:harness-custom-pipeline
+      input:
+        url: "YOUR PIPELINE URL"
+        inputset:
+          project_name: ${{ parameters.project_name }}
+          gitlab_repo: ${{ parameters.gitlab_repo }}
+          gitlab_org: ${{ parameters.gitlab_org }}
+          gitlab_token: ${{ parameters.gitlab_token }}
+        apikey: ${{ parameters.token }}
+    # The final step is to register our new component in the catalog.
+  output:
+    links:
+      - title: Pipeline Details
+        url: ${{ steps.trigger.output.PipelineUrl }}

@@ -1,0 +1,9 @@
+apiVersion: backstage.io/v1alpha1
+kind: Location
+metadata:
+  name: example-sub-domains
+  description: A collection of all IDP example sub-domains
+spec:
+  targets:
+    - ./sub-domain/commercial.yaml
+    - ./sub-domain/development.yaml
